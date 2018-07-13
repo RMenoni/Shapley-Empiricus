@@ -11,14 +11,10 @@ def subseq(seq):
         s.sort()
         yield ','.join(s)
 
+"""
+Deprecado; Versoes novas em shapley_value.pyx
 
 def v_function(A, C_values):
-    """
-    Computes worth of one coalition of channels
-    :param A: a coalition of channels
-    :param C_values: dict with conversion # of each set of channels
-    :return: worth of A
-    """
     worth_of_A = 0
     for subset in subseq(A.split(',')):
         subset.sort()
@@ -46,7 +42,7 @@ def get_v_values(channels, C_values):
     with open(filename, 'wb') as file:
         pickle.dump(v_values, file)
     return v_values
-
+"""
 
 def shapley(channels, v_values):
     from collections import defaultdict
